@@ -65,7 +65,7 @@
             e.preventDefault();
             let userInput = $("#searchInput").val();
             geocode(userInput, MAPBOX_KEY).then(function (results) {
-                console.log("onSearch " + userInput + " Lng: " + results[0] + ",Lat: " + results[1]);
+                // console.log("onSearch " + userInput + " Lng: " + results[0] + ",Lat: " + results[1]);
                 // console.log(results[0]); //lon
                 // console.log(results[1]); //lat
                 updateWeatherLocation.lon = results[0]
