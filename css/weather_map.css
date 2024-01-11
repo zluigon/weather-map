@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+    background-color: #c6d5f6;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.mapbox {
+    height: 500px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.warning {
+    width: 100%;
+    background-color: #e74c3c;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.warning_content {
+    display: block;
+    width: 100%;
+    animation: move 25s linear infinite;
+}
+
+/* Create the animation */
+@keyframes move {
+    from {
+        transform: translateX(0%);
+    } to {
+          transform: translateX(-100%);
+      }
+}
+
+#current-weather {
+    border-right: 1px solid #000000;
+}
+
+#current-misc {
+    border-left: 1px solid #000000;
+}
+
+.card {
+    border: 3px black solid;
+    background-color: #ffffff !important;
+    color: #000000;
+}
