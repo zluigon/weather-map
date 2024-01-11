@@ -3,7 +3,7 @@
 
     $(document).ready(function () {
 
-        mapboxgl.accessToken = MAPBOX_KEY;
+        mapboxgl.accessToken = mpbxk;
 
         const map = new mapboxgl.Map({
             container: 'map', // container ID
@@ -29,7 +29,7 @@
         let updateWeatherLocation = {
             lat: 40.979259461189486,
             lon: -74.11649240171937,
-            appid: OPEN_WEATHER_APPID,
+            appid: opwthappid,
             units: "imperial"
         }
 
@@ -64,7 +64,7 @@
         $("#myBtn").click(function (e) {
             e.preventDefault();
             let userInput = $("#searchInput").val();
-            geocode(userInput, MAPBOX_KEY).then(function (results) {
+            geocode(userInput, mpbxk).then(function (results) {
                 // console.log("onSearch " + userInput + " Lng: " + results[0] + ",Lat: " + results[1]);
                 // console.log(results[0]); //lon
                 // console.log(results[1]); //lat
