@@ -42,7 +42,7 @@
 
         function onDragEnd() {
             const lngLat = marker.getLngLat();
-            console.log(`onDrag: Longitude: ${lngLat.lng}, Latitude: ${lngLat.lat}`);
+            // console.log(`onDrag: Longitude: ${lngLat.lng}, Latitude: ${lngLat.lat}`);
             let lat = lngLat.lat
             let lng = lngLat.lng
             updateWeatherLocation.lon = lng
@@ -107,7 +107,7 @@
                         $(".warning").css("display", "none")
                     } else {
                         $(".warning").css("display", "block");
-                        $(".warning_content").html(`<span>${data.alerts[0].description}</span>`);
+                        $(".warning_content").html(`${data.alerts[0].description}`);
                     }
 
                     $("#current-weather").html(`<h3>Current Weather: </h3><h2>${data.current.weather[0].main} ${Math.floor(data.current.temp)}&deg;</h2><img src="https://openweathermap.org/../img/w/${data.current.weather[0].icon}.png"><h4><img src="img/high-temperature.png"> ${Math.floor(data.daily[0].temp.max)}&deg; <img src="img/low-temperature.png"> ${Math.floor(data.daily[0].temp.min)}&deg; </h4>`);
