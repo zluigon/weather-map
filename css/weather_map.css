@@ -33,7 +33,7 @@ body {
 .warning_content {
     display: block;
     width: 100%;
-    animation: move 15s linear infinite;
+    animation: move 21s linear infinite;
 }
 
 /* Create the animation */
